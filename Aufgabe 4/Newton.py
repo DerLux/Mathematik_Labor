@@ -3,8 +3,8 @@ import math as m
 print("Authors: Tobias Stöhr, Lukas Butscher, Wiebke Prinz, Jona Böcker\n")
 
 epsilon = 1e-10  # Abbruchbedingung
-f = lambda y: 1 / 3 * m.sqrt((100 - y) ** 2 + 100 ** 2) + 1 / 4 * m.sqrt(100 ** 2 + y ** 2)
-Df = lambda y: ((y - 100) / 3 * m.sqrt((100 - y) ** 2 + 100 ** 2)) + (y / (5 * m.sqrt(100 ** 2 + y ** 2)))
+f = lambda y: 1 / 3 * m.sqrt((100 - y) ** 2 + 100 ** 2) + 1 / 4 * m.sqrt(100 ** 2 + y ** 2)  # Funktion
+Df = lambda y: ((y - 100) / 3 * m.sqrt((100 - y) ** 2 + 100 ** 2)) + (y / (5 * m.sqrt(100 ** 2 + y ** 2)))  # Ableitung
 
 
 # f = lambda x: x ** 3 - x ** 2 - 1  # Funktion
