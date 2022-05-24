@@ -16,11 +16,11 @@ def newton(x0, max_iter):
         if abs(Dfxn) < TOL:
             print('Lösung nach', n, 'durchläufen gefunden.')
             return xn
-        Dfxn = Df(xn)
-        if Dfxn == 0:
+        DDfxn = DDf(xn)
+        if DDfxn == 0:
             print('Es wurde keine Lösung gefunden.')
             return None
-        xn = xn - fxn / Dfxn
+        xn = xn - (Dfxn / DDfxn)*1000000000000
     print('Anzahl der max. Durchläufe überschritten. Es wurde keine Lösung gefunden')
     return None
 
