@@ -9,7 +9,8 @@ TOL = 1e-12  # Abbruchbedingung
 f = lambda y: 1 / 3 * m.sqrt((100 - y) ** 2 + 100 ** 2) + 1 / 5 * m.sqrt(100 ** 2 + y ** 2)  # Funktion
 Df = lambda y: ((y - 100) / (3 * m.sqrt((100 - y) ** 2 + 100 ** 2))) + y / (5 * m.sqrt(100 ** 2 + y ** 2))  # Abl
 # DDf = lambda y: 1 / (5 * m.sqrt(y ** 2 + 10000)) - y ** 2 / (5 * (y ** 2 + 10000) ** 1.5) + (100 - y) * (y - 100) / (3 * ((100 - y) ** 2 + 10000) ** 1.5) + 1 / (3 * m.sqrt((100 - y) ** 2) + 10000)
-DDf = lambda y: 10000 * (y ** 2 + 10000) ** 1.5 + 6000 * ((100 - y) ** 2 + 10000) ** 1.5 / (3*((100 - y) ** 2 + 10000) ** 1.5 * (y ** 2 + 10000) ** 1.5)
+DDf = lambda y: 10000 * (y ** 2 + 10000) ** 1.5 + 6000 * ((100 - y) ** 2 + 10000) ** 1.5 / (
+        3 * ((100 - y) ** 2 + 10000) ** 1.5 * (y ** 2 + 10000) ** 1.5)
 
 
 def newton(x0, max_iter):
@@ -23,7 +24,7 @@ def newton(x0, max_iter):
         if DDfxn == 0:
             print('Es wurde keine Lösung gefunden.')
             return None
-        xn = xn - (Dfxn / DDfxn)*1000000000000
+        xn = xn - (Dfxn / DDfxn) * 1000000000000
     print('Anzahl der max. Durchläufe überschritten. Es wurde keine Lösung gefunden')
     return None
 
