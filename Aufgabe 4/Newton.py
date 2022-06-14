@@ -27,6 +27,7 @@ def newton(x0, max_iter):
     print('Anzahl der max. Durchläufe überschritten. Es wurde keine Lösung gefunden')
     return None
 
+
 def diagonale(x, y, v):
     s = m.sqrt(m.pow(x, 2) + m.pow(y, 2))
     return s / v
